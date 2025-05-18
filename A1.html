@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Navbar</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            background-color: rgb(95, 177, 235);
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: blue;
+
+        }
+
+        .topnav a {
+            float: left;
+            color: lightblue;
+
+        }
+
+        .topnav a {
+            float: left;
+            color: lightblue;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .topnav a:hover {
+            background-color: lightgoldenrodyellow;
+            color: rgb(11, 238, 189);
+        }
+
+        .topnav a:active {
+            background-color: #ffe066;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="topnav">
+        <a class="active" href="A1.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="Tutorial.html">Tutorials</a>
+        <a href="Explore.html">Explore</a>
+
+    </div>
+    <div>
+    <img class="mySlides" src="bachira.jpg" style="height:500px;width:800px">
+    <img class="mySlides" src="kunigami.jpg"style="height:500px;width:800px">
+    <img class="mySlides" src="Kaiser.jpg" style="height:500px;width: 800px;px;">
+</div>
+    
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        // Automatic Slideshow - change image every 3 seconds pls
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+
+            for (i = 0; i < x.length; i++) {
+                // #executed for only 0 1 2
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            //myidex=0,1,2,3 for index 3 come back again to 1
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 3000);
+            //calling function every 3 seconds
+
+        } 
+    </script>
